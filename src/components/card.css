@@ -25,6 +25,9 @@
 .nav i {
     margin: 0 3px 0 0;
 }
+.nav h5{
+    cursor: pointer;
+}
 .card{
     width: 250px;
     height: 300px;
