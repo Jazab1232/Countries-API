@@ -1,0 +1,135 @@
+*{
+    font-family: "Nunito Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav{
+
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px 0 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.nav h2{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.nav i {
+    margin: 0 3px 0 0;
+}
+.card{
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px 0 0 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.4s, box-shadow 0.3s;
+}
+.darkbg{
+    background-color: rgb(0, 10, 26);
+    color: white;
+    
+}
+.darkCard{
+    background-color: rgb(9, 33, 72);
+    color: white;
+    
+}
+.card:hover {
+    transform: scale(1.09); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card img{
+    width: 100%;
+    max-height: 50%;
+}
+.card-text{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.card-text h3{
+    margin: 5px 0 5px 0;
+}
+.countriesCard{
+    padding-inline: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* justify-content: space-between; */
+    }
+    *{
+        font-family: "Nunito Sans", sans-serif;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    .nav{
+    
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px 0 40px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    
+    }
+    .nav h2{
+        font-weight: 700;
+        font-size: 24px;
+    }
+    
+    .nav i {
+        margin: 0 3px 0 0;
+    }
+    
+    .search-box{
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 80px;
+    }
+    .input-box{
+        margin: 0px 40px 0 0 ;
+        width: 40%;
+        background-color: rgb(233, 233, 233);
+        border-radius: 5px;
+        padding: 0 5px 0 25px;
+    }
+    .input-box i  {
+       margin: 0 15px 0 0;
+    }
+    #input{
+        width: 80%;
+        height: 40px;
+        /* border-radius: 5px; */
+       
+       border: none;
+       outline: none;
+       background-color: transparent;
+       
+    
+    }
+    #region{
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        /* cursor: pointer; */
+    }
+    
+    
+    
+    
