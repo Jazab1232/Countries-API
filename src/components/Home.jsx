@@ -9,14 +9,17 @@ import Dropdown from './Dropdown'
 
 export default function Home() {
     let [query, setQuery] = useState('')
+    let [isDark, setIsDark] = useState(false)
+   console.log(isDark);
+    
   return (
-    <div className='main'>
-      <Header />
+    <div className={isDark ? 'main darkBg' : 'main' }>
+      <Header isDark={isDark} setIsDark={setIsDark} />
       <div className='search-box'>
-      <Input setQuery={setQuery} />
-        <Dropdown />
+      <Input setQuery={setQuery} isDark={isDark} />
+        <Dropdown isDark={isDark} />
       </div>
-      <CountriesList query={query} />
+      <CountriesList query={query} isDark={isDark} />
     </div>
   )
 }

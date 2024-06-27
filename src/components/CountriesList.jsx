@@ -3,7 +3,7 @@ import Card from './Card'
 import '../components/card.css'
 
 
-export default function CountriesList({ query }) {
+export default function CountriesList({ query, isDark }) {
   let [countries, setCountries] = useState([])
   useEffect(() => {
     fetch('https://restcountries.com/v3.1/all').then((res) => res.json())
@@ -17,7 +17,8 @@ export default function CountriesList({ query }) {
     return country.name.common.toLowerCase().includes(query)
   }).map((country) => {
 
-    return <Card name={country.name.common}
+    return <Card isDark={isDark}
+      name={country.name.common}
       flag={country.flags.svg}
       population={country.population}
       region={country.region}

@@ -1,15 +1,15 @@
 import '../components/card.css'
 
-export default function Header() {
+export default function Header( {isDark,setIsDark}) {
     
   
     return (
   
       <>
-          <header className="navbar">
+          <header className={isDark ? 'navbar darkElement': 'navbar'}>
         <div className="nav">
             <h2>Where in the world?</h2>
-            <h5> <i className="fa-regular fa-moon"></i>Dark Mode</h5>
+            <h5 onClick={()=>{ setIsDark(!isDark)}} > <i className="fa-regular fa-moon"></i>Dark Mode</h5>
         </div>
     </header>
       </>
