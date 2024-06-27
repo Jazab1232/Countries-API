@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function Card({ name, flag, population, capital, region, isDark }) {
   return (
     <>
-      <Link to={`/details?name=${name}`} className={isDark ? "card darkElement " : "card "}   >
+      <Link to={`/details?name=${name}&isDark=${isDark}`} className={isDark ? "card darkElement " : "card "}   >
         <div className="imgBox" >
           <img src={flag} alt="Flag" />
         </div>

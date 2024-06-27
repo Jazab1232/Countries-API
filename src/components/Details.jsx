@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Details() {
     let url = new URLSearchParams(window.location.search).get('name');
+    let isDark = new URLSearchParams(window.location.search).get('isDark');
 
 
     let [countries, setCountries] = useState([])
@@ -21,13 +22,14 @@ export default function Details() {
     }).map((country) => {
         console.log(country);
         return (
-            <main id="main">
-                <Link to={'/'} id="back-btn"><i className="fa-solid fa-arrow-left-long"></i> Back</Link>
+            <main id="main" className={isDark ?'darkBg':''}>
+                <Link to={'/'} id="" className={isDark ?' back-btn darkElement':'back-btn'}><i className="fa-solid fa-arrow-left-long"></i> Back</Link>
 
                 <div className="details">
                     <div className="img"> <img src={country.flags.svg} alt="" /></div>
 
-                    <div className="country-info1">
+                    <div className='countriesInfo'>
+                        <div className="country-info1">
                         <h1>{country.name.common}</h1>
                         <p><b>Native Name: </b>  {country.name.common}</p>
                         <p><b>Population:</b> {country.population}</p>
@@ -45,6 +47,7 @@ export default function Details() {
                         })}</p>
                     </div>
 
+                    </div>
                 </div>
 
 
@@ -52,10 +55,10 @@ export default function Details() {
         )
     })
     return (
-        <>
-            <Header />
+        <div  className={isDark ? ' darkBg': ''}>
+            <Header   />
             {filterArray}
 
-        </>
+        </div>
     )
 }
